@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { supabase } from './lib/supabase'
 import { ThemeProvider } from './lib/ThemeContext'
@@ -26,6 +26,7 @@ const pageVariants = {
 
 function AppLayout({ children }) {
   const [notifOpen, setNotifOpen] = useState(false)
+  const location = useLocation()
 
   return (
     <div className="app-layout">
