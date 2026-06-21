@@ -9,7 +9,7 @@ import { createClient } from '@supabase/supabase-js'
 // 5. Copy "anon public" key and paste it below replacing YOUR_SUPABASE_ANON_KEY
 // -------------------------------------------------------
 
-const SUPABASE_URL = 'YOUR_SUPABASE_URL'
-const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY'
+const SUPABASE_URL = 'https://dcttyqkrmeheksuzztfe.supabase.co'
+const SUPABASE_ANON_KEY = 'sb_publishable_lIwaCRqap1pdGmfXRM2EQw_EHLvTAPn'
 
 export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
