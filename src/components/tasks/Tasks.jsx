@@ -137,14 +137,14 @@ export default function Tasks() {
       </div>
 
       <button onClick={() => setShowDelete(task.id)} style={{
-  background: 'none',
-  border: 'none',
-  cursor: 'pointer',
-  color: '#F87171',
-  padding: 4
-}}>
-  <Trash2 size={14} />
-</button>
+        background: 'none', border: 'none', cursor: 'pointer',
+        color: 'var(--text-muted)', padding: 4, opacity: 0, transition: 'var(--transition)'
+      }}
+        className="delete-btn">
+        <Trash2 size={14} />
+      </button>
+    </motion.div>
+  )
 
   const Section = ({ title, tasks, color }) => tasks.length > 0 ? (
     <div style={{ marginBottom: 24 }}>
@@ -270,6 +270,7 @@ export default function Tasks() {
         )}
       </AnimatePresence>
 
+      <style>{`.delete-btn { opacity: 0 } div:hover > .delete-btn { opacity: 1 }`}</style>
     </div>
   )
 }
